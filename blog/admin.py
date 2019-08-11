@@ -10,7 +10,7 @@ class BlogArticlesAdmin(admin.ModelAdmin):
     search_fields = ("title", "body")
     raw_id_fields = ("author",)
     date_hierarchy = "publish"
-    ordering = ["-publish", "author"]
+    ordering = ("-publish", "author")
 
 
 admin.site.register(BlogArticles, BlogArticlesAdmin)

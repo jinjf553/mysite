@@ -5,13 +5,13 @@
 # @Contact : 553041800@qq.com
 # @Link    : https://github.com/jinjf553
 # @software: PyCharm
-# @Date    : 2019/7/27 16:53
+# @Date    : 2019/8/10 15:05
 # @Version : ??
 from django.urls import path
 
-from blog import views
+from . import views
 
 urlpatterns = [
-    path('', views.blog_title),
-    path('<int:article_id>/', views.blog_article)
+    path('', views.blog_title, name='blog_title'),
+    path('<int:article_id>/', views.blog_article, name='blog_article'),
 ]
