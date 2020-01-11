@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}register user{% endblock %}
+
+{% block content %}
+    <div class="row text-center vertical-middle-sm">
+    <h1>Register</h1>
+    <p>If you are a user, <stong><a href="{% url 'account:user_login' %}">Login</a>, please</stong></p>
+    <p>or register</p>
+    <form class="form-horizontal" action="." method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="{{ form.username.id_for_label }}" class="col-md-5 control-label" style="color:red">
+                <span class="glyphicon glyphicon-user">Username</span>
+            </label>
+            <div class="col-md-6 text-left">{{ form.username }}</div>
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.email.id_for_label }}" class="col-md-5 control-label" style="color:red">
+                <span class="glyphicon glyphicon-envelope">Email</span>
+            </label>
+            <div class="col-md-6 text-left">{{ form.email }}</div>
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.password.id_for_label }}" class="col-md-5 control-label" style="color:red">
+                <span class="glyphicon glyphicon-floppy-open">Password</span>
+            </label>
+            <div class="col-md-6 text-left">{{ form.password }}</div>
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.password.id_for_label }}" class="col-md-5 control-label" style="color:red">
+                <span class="glyphicon glyphicon-floppy-open">Password</span>
+            </label>
+            <div class="col-md-6 text-left">{{ form.password2 }}</div>
+        </div>
+        <input type="submit" class="btn btn-primary btn-lg" value="REGISTER">
+    </form>
+    </div>
+{% endblock %}
