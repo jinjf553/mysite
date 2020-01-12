@@ -7,7 +7,7 @@
 {% block content %}
     <div class="row text-center vertical-middle-sm">
     <h1>Register</h1>
-    <p>If you are a user, <stong><a href="{% url 'account:user_login' %}">Login</a>, please</stong></p>
+    <p>If you are a user, <strong><a href="{% url 'account:user_login' %}">Login</a>, please</strong></p>
     <p>or register</p>
     <form class="form-horizontal" action="." method="post">
         {% csrf_token %}
@@ -34,9 +34,23 @@
 
         <div class="form-group">
             <label for="{{ form.password.id_for_label }}" class="col-md-5 control-label" style="color:red">
-                <span class="glyphicon glyphicon-floppy-open">Password</span>
+                <span class="glyphicon glyphicon-floppy-open">Confirm Password</span>
             </label>
             <div class="col-md-6 text-left">{{ form.password2 }}</div>
+        </div>
+
+        <div class="form-group">
+            <label for="{{ profile.birth.id_for_label }}" class="col-md-5 control-label" style="color:red">
+                <span class="glyphicon glyphicon-calendar">Birth Date</span>
+            </label>
+            <div class="col-md-6 text-left">{{ profile.birth }}</div>
+        </div>
+
+        <div class="form-group">
+            <label for="{{ profile.phone.id_for_label }}" class="col-md-5 control-label" style="color:red">
+                <span class="glyphicon glyphicon-earphone">Phone</span>
+            </label>
+            <div class="col-md-6 text-left">{{ profile.phone }}</div>
         </div>
         <input type="submit" class="btn btn-primary btn-lg" value="REGISTER">
     </form>
