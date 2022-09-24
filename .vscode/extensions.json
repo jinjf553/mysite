@@ -1,0 +1,25 @@
+{
+    "recommendations": [
+        "coenraads.bracket-pair-colorizer-2",
+        "davidanson.vscode-markdownlint",
+        "donjayamanne.githistory",
+        "eamodio.gitlens",
+        "formulahendry.vscode-mysql",
+        "github.vscode-pull-request-github",
+        "gruntfuggly.todo-tree",
+        "kevinrose.vsc-python-indent",
+        "littlefoxteam.vscode-python-test-adapter",
+        "mhutchie.git-graph",
+        "jbockle.jbockle-format-files",
+        "frhtylcn.pythonsnippets",
+        "ms-ceintl.vscode-language-pack-zh-hans",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "njpwerner.autodocstring",
+        "njqdev.vscode-python-typehint",
+        "quicktype.quicktype",
+        "richie5um2.vscode-sort-json",
+        "usernamehw.errorlens",
+        "yzhang.markdown-all-in-one"
+    ]
+}
